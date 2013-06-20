@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="design" id="kernel" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303631303036204D756C746963617374696E675365727665722F59756A69">
+  <children xsi:type="editmodel:ClassEditModel" name="MulticastServer" location="380,20" size="270,187" id="kernel/MulticastServer" runTimeClassModel="serverSocket,MulticastServer(II),workerPool,attendClient(),listenMulticast(),closeServer()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="156,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="serverSocket" id="kernel/MulticastServer#serverSocket"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workerPool" id="kernel/MulticastServer#workerPool"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,72">
+      <children xsi:type="editmodel:MethodEditModel" name="MulticastServer" id="kernel/MulticastServer#MulticastServer(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="attendClient" id="kernel/MulticastServer#attendClient()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeServer" id="kernel/MulticastServer#closeServer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="listenMulticast" id="kernel/MulticastServer#listenMulticast()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kernel/MulticastServer->" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="270,97" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,90"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="WorkerPool" location="660,27" size="204,187" id="kernel.workerpool/WorkerPool" runTimeClassModel="numWorkers,queue,getInstance(),instance,workers,WorkerPool(I),executeTask(Lkernel.workerpool.tasks.ITask;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="numWorkers" id="kernel.workerpool/WorkerPool#numWorkers"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workers" id="kernel.workerpool/WorkerPool#workers"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="instance" id="kernel.workerpool/WorkerPool#instance"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,54">
+      <children xsi:type="editmodel:MethodEditModel" name="WorkerPool" id="kernel.workerpool/WorkerPool#WorkerPool(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeTask" id="kernel.workerpool/WorkerPool#executeTask(Lkernel.workerpool.tasks.ITask;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInstance" id="kernel.workerpool/WorkerPool#getInstance()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ClientDTODeserializeStrategy" location="1300,78" size="385,133" id="kernel.serialization.strategies/ClientDTODeserializeStrategy" runTimeClassModel="deserializeClientDTO([B),deserializeClientDTO(Ljava.net.Socket;),ClientDTODeserializeStrategy()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="275,54">
+      <children xsi:type="editmodel:MethodEditModel" name="deserializeClientDTO" id="kernel.serialization.strategies/ClientDTODeserializeStrategy#deserializeClientDTO(Ljava.net.Socket;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deserializeClientDTO" id="kernel.serialization.strategies/ClientDTODeserializeStrategy#deserializeClientDTO([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="ClientDTODeserializeStrategy" id="kernel.serialization.strategies/ClientDTODeserializeStrategy#ClientDTODeserializeStrategy()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="kernel.serialization/IDeserializeStrategy&lt;-kernel.serialization.strategies/ClientDTODeserializeStrategy" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,68" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="298,64"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.2/@sourceConnections.0" name="IDeserializeStrategy" location="960,82" size="298,129" id="kernel.serialization/IDeserializeStrategy" runTimeClassModel="deserializeClientDTO([B),deserializeClientDTO(Ljava.net.Socket;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="275,36">
+      <children xsi:type="editmodel:MethodEditModel" name="deserializeClientDTO" id="kernel.serialization/IDeserializeStrategy#deserializeClientDTO(Ljava.net.Socket;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deserializeClientDTO" id="kernel.serialization/IDeserializeStrategy#deserializeClientDTO([B)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ClientDTOSerializeStrategy" location="1240,252" size="371,133" id="kernel.serialization.strategies/ClientDTOSerializeStrategy" runTimeClassModel="ClientDTOSerializeStrategy(),serializeClientDTO(Lkernel.dto.ClientDTO;),serializeClientDTO(Ljava.net.Socket;Lkernel.dto.ClientDTO;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="284,54">
+      <children xsi:type="editmodel:MethodEditModel" name="serializeClientDTO" id="kernel.serialization.strategies/ClientDTOSerializeStrategy#serializeClientDTO(Ljava.net.Socket;Lkernel.dto.ClientDTO;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="serializeClientDTO" id="kernel.serialization.strategies/ClientDTOSerializeStrategy#serializeClientDTO(Lkernel.dto.ClientDTO;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="ClientDTOSerializeStrategy" id="kernel.serialization.strategies/ClientDTOSerializeStrategy#ClientDTOSerializeStrategy()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="kernel.serialization/ISerializeStrategy&lt;-kernel.serialization.strategies/ClientDTOSerializeStrategy" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,60" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="307,67"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0" name="ISerializeStrategy" location="930,245" size="307,129" id="kernel.serialization/ISerializeStrategy" runTimeClassModel="serializeClientDTO(Lkernel.dto.ClientDTO;),serializeClientDTO(Ljava.net.Socket;Lkernel.dto.ClientDTO;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="284,36">
+      <children xsi:type="editmodel:MethodEditModel" name="serializeClientDTO" id="kernel.serialization/ISerializeStrategy#serializeClientDTO(Ljava.net.Socket;Lkernel.dto.ClientDTO;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="serializeClientDTO" id="kernel.serialization/ISerializeStrategy#serializeClientDTO(Lkernel.dto.ClientDTO;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Worker" location="722,350" size="226,115" id="kernel.workerpool.workers/Worker" runTimeClassModel="queue,run(),Worker(Ljava.util.LinkedList;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="54,36">
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="kernel.workerpool.workers/Worker#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Worker" id="kernel.workerpool.workers/Worker#Worker(Ljava.util.LinkedList;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ClientDTO" location="380,480" size="376,349" id="kernel.dto/ClientDTO" runTimeClassModel="desc,getDate(),setName(Ljava.lang.String;),setDesc(Ljava.lang.String;),date,setDate(Ljava.util.Date;),toString(),setId(Ljava.lang.Integer;),id,getName(),getDesc(),getId(),name,serialVersionUID,ClientDTO(Ljava.lang.Integer;Ljava.lang.String;Ljava.util.Date;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kernel.dto/ClientDTO#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="desc" id="kernel.dto/ClientDTO#desc"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="kernel.dto/ClientDTO#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="serialVersionUID" id="kernel.dto/ClientDTO#serialVersionUID"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="date" id="kernel.dto/ClientDTO#date"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="353,180">
+      <children xsi:type="editmodel:MethodEditModel" name="setName" id="kernel.dto/ClientDTO#setName(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="kernel.dto/ClientDTO#getId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDate" id="kernel.dto/ClientDTO#getDate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDesc" id="kernel.dto/ClientDTO#setDesc(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="ClientDTO" id="kernel.dto/ClientDTO#ClientDTO(Ljava.lang.Integer;Ljava.lang.String;Ljava.util.Date;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="kernel.dto/ClientDTO#getName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDesc" id="kernel.dto/ClientDTO#getDesc()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDate" id="kernel.dto/ClientDTO#setDate(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setId" id="kernel.dto/ClientDTO#setId(Ljava.lang.Integer;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="kernel.dto/ClientDTO#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterlas="true"/>
+</editmodel:ClassDiagramEditModel>
